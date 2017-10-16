@@ -36,17 +36,17 @@ export class Controller {
         });
 
         $("#rndBtn").click(() => {
-            var player = new Player();            
-            var playerArr = ["George","Joe", "Jason","Jane","Jack","Jim", "Tom", "Tim", "James"];
+            var player = new Player();
+            var playerArr = ["George", "Joe", "Jason", "Jane", "Mary", "Jack", "Jim", "Tom", "Tim", "James"];
             player.setMode($("#selectMode").val());
             player.setLevel($("#selectLevel").val());
-            for(let i = 0; i < playerArr.length; i++){             
-                player.setName(playerArr[Math.floor(Math.random()*playerArr.length)]);
+            for (let i = 0; i < playerArr.length; i++) {
+                player.setName(playerArr[Math.floor(Math.random() * playerArr.length)]);
                 player.setScore(Math.floor(Math.random() * 300 + 100));
                 this.view.viewPlayer(`${player.getName()}'s final score: ${player.getScore()}`);
                 this.socket.emit('message', player);
             }
-          
+
         });
 
         $("#postBtn").click(() => {
