@@ -1,0 +1,27 @@
+<h2>Standalone Score - Store App</h2>
+<form action="">
+    Mode:
+    <select class="modeLevel" id="selectMode" name="tableMode">
+        <option value="a" selected>ModeA</option>
+        <option value="b">ModeB</option>
+        <option value="c">ModeC</option>
+    </select>
+    Level:
+    <select class="modeLevel" id="selectLevel" name="tableLevel">
+        <option value="1" selected>level1</option>
+        <option value="2">level2</option>
+        <option value="3">level3</option>
+    </select>
+    Name:
+    <input type="text" id="name" /> Score:
+    <input type="text" id="score" />
+    <input type="button" value="add" name="add" id="postBtn"><br><br>
+    <input type="button" value="random list" name="generate" id="rndBtn">
+</form>
+
+<div id="test"></div>
+<div id="playerInfo"></div>
+
+<table id="scoreList" class="text"></table>
+<script src="/socket.io/socket.io.js" type="text/javascript"></script>
+<script src="main.js" type="module"></script>

@@ -1,0 +1,10 @@
+#displayPos {
+    cursor: pointer;
+}
+
+.col, #scoreList {
+    
+    border: black solid 1px;
+}
+
+
